@@ -4,7 +4,7 @@
 # https://github.com/hrydgard/ppsspp/issues/4449
 
 pkgname=ppsspp-qt-git
-pkgver=v0.9.5.r575.g7407be9
+pkgver=20131122
 pkgrel=1
 pkgdesc="A PSP emulator for Android, Windows, Mac, and Linux, written in C++ \
     with Qt UI."
@@ -18,7 +18,7 @@ provides=('ppsspp')
 source=('ppsspp::git://github.com/hrydgard/ppsspp.git#branch=master'
         'ppsspp.desktop')
 md5sums=('SKIP'
-        '489e0d8caed3c133e16bc6c59443f2af')
+        '7639cf40707503cfab0c51e566e92ad1')
 
 pkgver() {
     cd "$srcdir/ppsspp"
@@ -49,7 +49,7 @@ package() {
     cd $pkgdir
 
     mkdir -p $pkgdir/usr/bin
-    mkdir -p $pkgdir/usr/share/icons/hicolor/scalable/apps
+    mkdir -p $pkgdir/usr/share/icons/hicolor/48x48/apps
     mkdir -p $pkgdir/usr/share/applications/
 
     install -m755 $srcdir/ppsspp/build-qt/PPSSPPQt \

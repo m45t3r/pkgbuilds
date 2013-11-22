@@ -1,10 +1,9 @@
 [Desktop Entry]
 Type=Application
-Encoding=UTF-8
 Name=PPSSPP
 GenericName=Playstation Portable Simulator Suitable for Playing Portably
 Comment=A PSP emulator for Android, Windows, Mac, and Linux, written in C++
 Exec=PPSSPPQt
-Icon=ppsspp.png
+Icon=ppsspp
 Terminal=false
 Categories=Game;Emulator;Qt;
