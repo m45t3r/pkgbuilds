@@ -5,7 +5,7 @@
 
 pkgname=ppsspp-qt-git
 pkgver=20131122
-pkgrel=1
+pkgrel=2
 pkgdesc="A PSP emulator for Android, Windows, Mac, and Linux, written in C++ \
     with Qt UI."
 arch=('i686' 'x86_64')
@@ -48,14 +48,10 @@ build() {
 package() {
     cd $pkgdir
 
-    mkdir -p $pkgdir/usr/bin
-    mkdir -p $pkgdir/usr/share/icons/hicolor/48x48/apps
-    mkdir -p $pkgdir/usr/share/applications/
-
-    install -m755 $srcdir/ppsspp/build-qt/PPSSPPQt \
+    install -Dm755 $srcdir/ppsspp/build-qt/PPSSPPQt \
         $pkgdir/usr/bin/PPSSPPQt
-    install -m644 $srcdir/ppsspp/assets/icon-114.png \
-        $pkgdir/usr/share/icons/hicolor/48x48/apps/ppsspp.png
+    install -Dm644 $srcdir/ppsspp/assets/icon.svg \
+        $pkgdir/usr/share/pixmaps/ppsspp.svg
     install -Dm644 $srcdir/ppsspp.desktop \
         $pkgdir/usr/share/applications/ppsspp.desktop
 }
