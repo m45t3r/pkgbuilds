@@ -4,37 +4,38 @@
 # https://github.com/hrydgard/ppsspp/issues/4449
 
 pkgname=ppsspp-qt-git
-pkgver=20131123
+pkgver=20131125
 pkgrel=1
 pkgdesc="A PSP emulator for Android, Windows, Mac, and Linux, written in C++ \
     with Qt UI."
 arch=('i686' 'x86_64')
 url="http://www.ppsspp.org/"
-license=('GPL2')
-depends=('qt4')
+license=('GPL')
+depends=('qt5-base' 'qt5-multimedia' 'qt5-tools' 'sdl')
 makedepends=('git' 'gcc')
 optdepends=()
-provides=('ppsspp')
+provides=('ppsspp-qt')
 source=('ppsspp::git://github.com/hrydgard/ppsspp.git#branch=master'
-        'ppsspp.desktop')
+'ppsspp.desktop')
 md5sums=('SKIP'
-        '7639cf40707503cfab0c51e566e92ad1')
+'7639cf40707503cfab0c51e566e92ad1')
 
 pkgver() {
     cd "$srcdir/ppsspp"
-    git describe --long | sed -E 's/([^-]*-g)/r\1/;s/-/./g'
+    git describe --always | sed -E 's/([^-]*-g)/r\1/;s/-/./g'
 }
 
 build() {
     cd $srcdir/ppsspp
 
-    git submodule update --init
+    git submodule init
+    git submodule update
 
     export LDFLAGS="-lavutil -lavformat -lavcodec -lswscale -lswresample"
 
     mkdir build
     pushd build
-    qmake-qt4 ../Qt/PPSSPPQt.pro
+    qmake ../Qt/PPSSPPQt.pro
     make
     popd
 }
