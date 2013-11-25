@@ -3,11 +3,11 @@
 # and with Qt build instructions from here:
 # https://github.com/hrydgard/ppsspp/issues/4449
 
-pkgname=ppsspp-qt-git
+pkgname=ppsspp-qt4-git
 pkgver=20131125.1
 pkgrel=1
 pkgdesc="A PSP emulator for Android, Windows, Mac, and Linux, written in C++ \
-    with Qt UI."
+    with Qt4 UI."
 arch=('i686' 'x86_64')
 url="http://www.ppsspp.org/"
 license=('GPL')
