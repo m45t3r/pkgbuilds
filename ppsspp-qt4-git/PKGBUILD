@@ -15,7 +15,7 @@ depends=('qt4' 'sdl')
 makedepends=('git' 'gcc')
 optdepends=()
 provides=('ppsspp-qt')
-conflicts=('ppsspp-qt4-git')
+conflicts=('ppsspp-qt-git')
 source=('ppsspp::git://github.com/hrydgard/ppsspp.git#branch=master'
         'PPSSPP.desktop')
 md5sums=('SKIP'
