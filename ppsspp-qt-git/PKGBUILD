@@ -14,7 +14,6 @@ depends=('qt5-base' 'qt5-multimedia' 'sdl')
 makedepends=('qt5-tools' 'git' 'gcc')
 optdepends=()
 provides=('ppsspp-qt')
-conflicts=('ppsspp-qt4-git')
 #We only clone what we need to build instead of everything
 source=('ppsspp::git://github.com/hrydgard/ppsspp.git#branch=master'
         'ppsspp-lang::git://github.com/hrydgard/ppsspp-lang'
