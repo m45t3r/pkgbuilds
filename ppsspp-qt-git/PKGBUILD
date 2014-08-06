@@ -21,13 +21,11 @@ install='ppsspp.install'
 source=("ppsspp::git://github.com/hrydgard/ppsspp.git#branch=$_git_branch"
         "ppsspp-lang::git://github.com/hrydgard/ppsspp-lang"
         "ppsspp-ffmpeg::git://github.com/hrydgard/ppsspp-ffmpeg.git"
-        "native::git://github.com/hrydgard/native"
-        "PPSSPP.desktop")
+        "native::git://github.com/hrydgard/native")
 md5sums=('SKIP'
          'SKIP'
          'SKIP'
-         'SKIP'
-         '18a59404e0e343b5b2b9ee25d33fd448') 
+         'SKIP')
 
 pkgver() {
     cd "$srcdir/ppsspp"
